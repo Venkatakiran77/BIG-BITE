@@ -4,7 +4,6 @@ import api from '../api/Recipes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan} from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
-import Home from './Home';
 
 export default function Bookmarks() {
     const [storedItems, setStoredItems] = useState([]);
@@ -56,6 +55,7 @@ export default function Bookmarks() {
             console.log(id);
             const response = await axios.get(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}?key=<insert your key>`);
             setRecipeContent(response.data.data.recipe);
+            console.log(recipeContent);
         } catch (err) {
             console.log(err);
         }

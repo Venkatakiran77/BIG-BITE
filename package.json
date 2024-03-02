@@ -1,5 +1,5 @@
 {
-  "homePage": "https://Venkatakiran77.github.io/BIG-BITE",
+  "homePage": "http://Venkatakiran77.github.io/BIG-BITE",
   "name": "myrecipe",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run bulid",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",

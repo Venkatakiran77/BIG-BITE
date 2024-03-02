@@ -14,6 +14,7 @@ export default function AddRecipe() {
             console.log(customRecipe);
         if(customRecipe){
             const response=await api.post('/recipes',customRecipe);
+            console.log(response);
         }
         else{
             console.log('not uploaded');

@@ -13,9 +13,9 @@ export default function Logo() {
       "Discover Delectable Delights: Find Your Perfect Recipe!"
       </h1>
       <div className='images'>
-        <img className='logoImg' src="/assets/item1.jpg" id='img1' />
-        <img className='logoImg' src="/assets/item2.jpg" id='img2' />
-        <img className='logoImg' src="/assets/item3.jpg" id='img3' />
+        <img className='logoImg' src="/assets/item1.jpg" id='img1' alt='img' />
+        <img className='logoImg' src="/assets/item2.jpg" id='img2' alt='img' />
+        <img className='logoImg' src="/assets/item3.jpg" id='img3' alt='img' />
       </div>
       <p>
       Welcome to our culinary haven, where your quest for the perfect recipe ends! Whether you're craving a comforting classic or eager to explore exotic flavors, our website is your one-stop destination for all things delicious. From mouthwatering mains to tempting treats, we've curated a vast collection of recipes to tantalize your taste buds and inspire your culinary adventures.
