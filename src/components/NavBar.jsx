@@ -1,8 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Home from './Home';
-import axios from 'axios';
-import Logo from './Logo';
 
 export default function NavBar() {
     
