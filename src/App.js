@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import AddRecipe from './components/AddRecipe';
+import Home from './components/Home';
+import {  Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Bookmarks from './components/Bookmarks';
+import Logo from './components/Logo';
 
 function App() {
+  // localStorage.clear();
+  document.title='BIG BITE';
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <NavBar></NavBar>
+    <Routes>
+      <Route exact path='/' element={<Logo />}></Route>
+      <Route exact path='/Logo' element={<Logo />}></Route>
+      <Route exact path='/home' element={<Home />}></Route>
+      <Route exact path='/AddRecipe' element={<AddRecipe />}></Route>
+      <Route exact path='/Bookmarks' element={<Bookmarks />}></Route>
+     </Routes> 
+    </>
   );
 }
 

@@ -1,13 +1,359 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+nav{
+  width: 100vw;
+  height: 9vh;
+  background-color: black;
+  font-size: 1.2vw;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  /* overflow: hidden; */
+}
+nav .contentDiv{
+  width: 40vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav a{
+  text-decoration: none;
+  font-weight: bold;
+  color: cadetblue;
+}
+nav a:hover{
+  color: burlywood;
+}
+nav .logoImg{
+  width: 100%;
+  height: 8vh;
+  border-radius: 10px;
+}
+.mainContainer{
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.container{
+  width: 40%;
+  height: 150vh;
+  scroll-behavior: smooth;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left:-1%;
+
+}
+.container img{
+  width: 20%;
+  height: 10vh;
+  border-radius: 100%;
+}
+.list-group-item .btn{
+  width: 90%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+.list-group-item{
+  width: 80%;
+  background-color:#1c1d1e;
+}
+.list-group-item:hover{
+  background-color:cadetblue;
+  color: white;
+
+}
+.btn{
+  color: white;
+  width: 100%;
+}
+.pagesDiv{
+  width: 80%;
+  margin-top: 0.7vw;
+  display: none;
+  justify-content: space-between;
+}
+.activePage {
+  display: flex;
+}
+.pages{
+  width: 20%;
+  height: 4vh;
+  background-color: cadetblue;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  color: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.recipeDetails{
+  width:69.4%;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  position: absolute;
+  right: 0%;
+  top: -2vh;
+  background-color: #1c1d1e;
 }
+
+.imgDiv{
+  width: 100%;
+  height: 60vh;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.imgDetails{
+  width: 40vw;
+  height: 45vh;
+  border-radius: 1rem;
+  box-shadow:6px 6px 6px black;
+}
+.timeDiv{
+  width: 25vw;
+  height: 40vh;
+  border-radius: 1rem;
+  box-shadow:6px 6px 6px black;
+  display: flex;
+  flex-direction:column;
+  justify-content:center ;
+  align-items: center;
+  font-size: 1.5vw;
+  color: orange;
+  background-color: black;
+}
+.item1{
+  font-size: 1.5vw;
+  color:orangered;
+  font-weight: bold;
+}
+.ingDiv{
+  width: 100%;
+  height: 80vh;
+  font-size: 1.2vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.ingDiv ul{
+  width:50% ;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;
+}
+.ingList{
+  list-style-type:disc;
+  font-size: 1.2vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #92af56;
+}
+.srcDiv{
+  width: 100%;
+  font-size: 2vw;
+}
+.srcDiv a{
+  text-decoration: none;
+}
+
+.bookmarkBtn{
+  width: 8vw;
+  height: 4vh;
+  font-size: 1vw;
+  margin-top: 1vw;
+  background-color:darkolivegreen;
+  color: white;
+  transition: all 0.5s;
+}
+.bookmarkBtn:hover{
+  scale: 1.1;
+}
+.searchDiv{
+  width: 30vw;
+  height: 6vh;
+  position: absolute;
+  right: 0;
+  top:1rem;
+  z-index: 2;
+}
+ 
+.inputDiv{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  position: fixed;
+}
+.inputDiv input{
+  width: 20vw;
+  height: 5vh;
+  color:black;
+  outline: invert;
+  background-color:cornsilk;
+  /* border-radius: 10px; */
+  text-align:start;
+}
+.inputDiv button{
+  width: 40%;
+  height: 5.5vh;
+  border-radius: 0.5vw;
+  outline: none;
+  border: none;
+  background-color:#1c1d1e;
+  color: white;
+  font-weight: bold;
+}
+.inputDiv button:hover{
+  background-color:blue ;
+}
+
+.simpleDiv{
+  width: 100%;
+  height: 180vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+}
+
+.simpleDiv h1{
+  font-size: 2vw;
+  margin-top: 5rem;
+  color: orange;
+  font-weight: bold; 
+  display: flex;
+}
+
+.simpleDiv h1 span{
+  font-size: 3vw;
+  margin-left: 1rem;
+  margin-top: -1vw;
+  animation: arrow 2s infinite both;
+}
+
+@keyframes arrow {
+  0%{
+    scale: 1;
+  }
+  50%{
+    scale: 2;
+  }
+  100%{
+    scale: 1;
+  }
+}
+
+.simpleDiv img{
+  width: 40vw;
+  height: 60vh;
+}
+
+.typesDiv{
+  width: 60vw;
+  height: 80vh;
+  background-size: 100% 100%;
+  border-radius: 1rem;
+  animation: bgImage 10s   infinite  both;
+}
+@keyframes bgImage {
+  0%{
+    background-image: url(../public/assets/1.jpg);
+  }
+  35%{
+    background-image: url(../public/assets/2.jpg);
+  }
+  70%{
+    background-image: url(../public/assets/3.jpg);
+  }
+  100%{
+    background-image: url(../public/assets/1.jpg);
+  }
+}
+
+.simpleActive{
+  display: none;
+}
+
+
+@media (max-width:500px) {
+  nav{
+    width: 100vw;
+    font-size: 2vw;
+  }
+  nav .contentDiv{
+    width: 50vw;
+  }
+  .searchDiv{
+    width: 35vw;
+    height: 2vh;
+  }
+  .container{
+    height:130vh;
+  }
+  .inputDiv input{
+    height: 4vh;
+    font-size: 2.1vw;
+  }
+  .inputDiv button{
+    width: 10vw;
+    height: 4vh;
+    margin-left: -2rem;
+    font-size: 2.1vw;
+  }
+  .typesDiv{
+    height: 40vh;
+  }
+  .list-group-item{
+    width: 100vw;
+  }
+  .pagesDiv{
+    width: 100vw;
+  }
+  .recipeDetails{
+    width: 100vw;
+    height: 150vh;
+    margin-top: -3vw;
+  }
+  .back{
+    display: none;
+  }
+  .forward{
+    display: flex;
+  }
+  .imgDetails{
+    width: 55vw;
+    height: 30vh;
+  }
+  .timeDiv{
+    width: 20vw;
+    height: 25vh;
+  }
+  .ingList{
+    font-size: 2vw;
+  }
+  .bookmarkBtn{
+    height: 2vh;
+  }
+
+}
+
+
+

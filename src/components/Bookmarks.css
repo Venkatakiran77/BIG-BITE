@@ -1,0 +1,100 @@
+.bookmarkDiv{
+    width: 100vw;
+    height: 100vh;
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color:#1c1e1d;
+}
+.bookmarkDiv ul{
+    width: 40%;
+    color: white;
+}
+.bookmarkDiv ul li{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #5c3615; */
+    align-items: center;
+    border: 0.5px solid black;
+}
+.bookmarkDiv ul li:hover{
+    background-color: #92af55;
+    color: black;
+}
+
+.bookmarkDiv ul li div{
+    width: 90%;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.bookmarkDiv ul li img{
+    width: 15%;
+    height: 8vh;
+    border-radius: 100%;
+}
+.bookmarkDiv .bkBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+.bookmarkDiv ul li i{
+    transition: all 0.5s;
+}
+.bookmarkDiv ul li i:hover{
+    scale: 1.5;
+    animation: delete 0.5s  infinite both ;
+}
+@keyframes delete {
+    0%{
+        transform: skew(0deg,0deg);
+    }
+    10%{
+        transform: skew(-6deg,6deg);
+    }
+    30%{
+        /* transform: scale(1.2); */
+    }
+    60%{
+        transform: skew(6deg,-6deg);
+    }
+    70%{
+        transform: skew(-6deg,-6deg);
+    }
+    100%{
+        transform: skew(0deg,0deg);
+    }
+}
+.deleteAll{
+    width: 10%;
+    height: 4vh;
+    margin-top: 0.5rem;
+    margin-left: 30vw;
+    font-weight: bold;
+    background-color: #92af55;
+    transition: all 0.5s;
+    color: black;
+}
+.deleteAll:hover{
+    background-color: #5c3615;
+    scale: 1.2;
+    color: black;
+}
+
+@media (max-width:500px) {
+    .bookmarkDiv ul{
+        width: 100vw;
+        overflow: hidden;
+    }
+    .bookmarkDiv ul li div{
+        width: 100%;
+    }
+    .deleteAll{
+        margin-left: 0vw;
+        width: 25vw;
+    }
+}
